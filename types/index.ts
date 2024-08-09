@@ -7,3 +7,12 @@ export type Project = {
   github?: string;
   tags: string[];
 };
+
+export type Experience = {
+  id: number;
+  title: string;
+  desc: string;
+  img: string;
+  link?: string;
+  tags: string[];
+};

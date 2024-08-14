@@ -6,6 +6,7 @@ import Projects from "@/components/home/Projects";
 import Skills from "@/components/home/Skills";
 import Testimonials from "@/components/home/Testimonials";
 import Experiences from "@/components/experience/Experience";
+import Podcasts from "@/components/home/Podcast";
 // import { allPosts } from "contentlayer/generated";
 // import { GetStaticProps } from "next";
 
@@ -22,12 +23,14 @@ export default function Home() {
     <Page currentPage="Home" meta={{ desc: "I'm a passionate web developer and designer coding beautiful websites and apps." }}>
       <Hero />
       <div className="mt-20 space-y-32">
+        <Podcasts />
         <div className="mb-0"> {/* Adjust the margin-bottom if needed */}
           <Experiences />
         </div>
         <Projects />
         <Skills />
         <Testimonials />
+
         {/* <Posts allPosts={allPosts} /> */}
       </div>
       <CTA />

@@ -15,7 +15,7 @@ const experiences: Experience[] = [
     title: "Project Manager at Eureka Forbes Ltd.",
     desc: "Led a team to drive innovations in the Aquaguard product line, utilizing Jira and PowerBI for project coordination and insights, and collaborated on design updates to enhance product performance.",
     img: "/static/experiences/efl 1.jpg",
-    link: "https://techcorp.com",
+    link: "https://drive.google.com/file/d/1jKe799K6Q1rA5HlTGqbJAx35IOQvFTyX/view?usp=sharing",
     tags: ["Product Innovation", "Project Coordination", "Data Analytics", "Management"],
   },
   {
@@ -23,7 +23,7 @@ const experiences: Experience[] = [
     title: "Intern at BloodConnect Foundation",
     desc: "Dedicated over 200 hours to advancing a blood-sufficient India, organizing donation camps, conducting awareness sessions, and securing corporate partnerships.",
     img: "/static/experiences/bct 1.jpg",
-    link: "https://codebase.com",
+    link: "https://www.linkedin.com/in/sanidhya-garg-iitd/overlay/1635537602196/single-media-viewer/?profileId=ACoAAD2wuvcBafZD5KR0LtCS1FMkHa6OCCDAVD8",
     tags: ["Community Outreach", "Event Management", "Social Impact"],
   },
   // {

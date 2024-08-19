@@ -7,6 +7,9 @@ import Skills from "@/components/home/Skills";
 import Testimonials from "@/components/home/Testimonials";
 import Experiences from "@/components/experience/Experience";
 import Podcasts from "@/components/home/Podcast";
+import Education from "@/components/home/Education";
+import NSS from "@/components/home/Linkedin";
+import Linkedin from "@/components/home/Linkedin";
 // import { allPosts } from "contentlayer/generated";
 // import { GetStaticProps } from "next";
 
@@ -27,8 +30,10 @@ export default function Home() {
         <div className="mb-0"> {/* Adjust the margin-bottom if needed */}
           <Experiences />
         </div>
+        <Education />
         <Projects />
         <Skills />
+        <Linkedin />
         <Testimonials />
 
         {/* <Posts allPosts={allPosts} /> */}

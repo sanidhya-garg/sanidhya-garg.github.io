@@ -9,6 +9,12 @@ type Testimonial = {
   job: string
 };
 
+interface Podcast {
+  title: string;
+  icon: string;
+  style?: object 
+}
+
 
 export const skills: Skill[] = [
   {
@@ -62,7 +68,7 @@ export const skills: Skill[] = [
   },
 ];
 
-export const podcasts: Podcast[] = [
+export const podcasts : Podcast[] = [
   {
     title: "HTML",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",

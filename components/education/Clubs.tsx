@@ -31,16 +31,16 @@ function Clubs() {
 
   const clubs = [
     {
-      name: "Coding Club",
-      description: "Led a group of passionate coders to build innovative projects and participate in hackathons.",
-      tags: ["Leadership", "Hackathons", "Innovation"],
-      imgSrc: "/static/experiences/bct 1.jpg"
+      name: "Venture Verse",
+      description: "Created a 45-page Design Thinking manual, managed a 400+ member community, organized a finale with guest speaker Deepika Dutta, and developed presentations for the second edition.",
+      tags: ["Design Thinking", "Community Management", "Event Organization"],
+      imgSrc: "/static/clubs/VV1.jpg"
     },
     {
-      name: "Robotics Club",
-      description: "Worked on various robotics projects, focusing on automation and machine learning.",
-      tags: ["Automation", "Machine Learning", "Teamwork"],
-      imgSrc: "/static/images/clubs/robotics_club.png"
+      name: "Musketeers",
+      description: "Led the creation of the rulebook, organized 5 workshops (2 offline, 3 online), and mentored 4 teams. Managed logistics, planning, and media coverage for all events, ensuring smooth execution from workshops to the final competition.",
+      tags: ["Leadership", "Event Management", "Mentorship"],
+      imgSrc: "/static/clubs/Muski .jpg"
     },
     {
       name: "Coding Club",

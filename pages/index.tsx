@@ -4,16 +4,11 @@ import Page from "@/components/utility/Page";
 // import Posts from "@/components/home/Posts";
 import Projects from "@/components/home/Projects";
 import Skills from "@/components/home/Skills";
-import Testimonials from "@/components/home/Testimonials";
 import Experiences from "@/components/experience/Experience";
 import Podcasts from "@/components/home/Podcast";
-import Education from "@/components/home/Education";
-import NSS from "@/components/home/Linkedin";
 import Linkedin from "@/components/home/Linkedin";
-import Clubs from "@/components/education/Clubs";
 import Institutions from "@/components/education/Institutions";
 import Publication from "@/components/education/Publication";
-import Subscribe from "@/components/home/Subscribe";
 // import { allPosts } from "contentlayer/generated";
 // import { GetStaticProps } from "next";
 

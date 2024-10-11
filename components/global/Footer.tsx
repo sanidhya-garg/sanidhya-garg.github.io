@@ -41,8 +41,19 @@ function Footer() {
           );
         })}
         
+        {/* Subscribe Iframe on the right side */}
+        <div className="col-span-1 flex justify-end">
+          <iframe
+            src="https://iamsanidhyagarg.substack.com/embed"
+            width="480"
+            height="320"
+            style={{ border: 'none', background: 'transparent' }} // Removed border and background
+            frameBorder="0"
+            scrolling="no"
+            title="Substack Subscription"
+          ></iframe>
+        </div>
       </div>
-      
     </footer>
   );
 }

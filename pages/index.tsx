@@ -10,6 +10,10 @@ import Podcasts from "@/components/home/Podcast";
 import Education from "@/components/home/Education";
 import NSS from "@/components/home/Linkedin";
 import Linkedin from "@/components/home/Linkedin";
+import Clubs from "@/components/education/Clubs";
+import Institutions from "@/components/education/Institutions";
+import Publication from "@/components/education/Publication";
+import Subscribe from "@/components/home/Subscribe";
 // import { allPosts } from "contentlayer/generated";
 // import { GetStaticProps } from "next";
 
@@ -30,12 +34,11 @@ export default function Home() {
         <div className="mb-0"> {/* Adjust the margin-bottom if needed */}
           <Experiences />
         </div>
-        <Education />
+        <Institutions />
         <Projects />
         <Skills />
         <Linkedin />
-        <Testimonials />
-
+        
         {/* <Posts allPosts={allPosts} /> */}
       </div>
       <CTA />

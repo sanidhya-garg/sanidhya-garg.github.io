@@ -1,64 +1,134 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import SectionTitle from '../global/SectionTitle';
 
 function Institutions() {
+  const institutionRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const [cards] = useState([
+    {
+      logo: "/path-to-sanskriti-logo.png",
+      alt: "Sanskriti School Logo",
+      title: "Sanskriti School, Delhi",
+      time: "2008 - 2020",
+      description: "2+10 Schooling",
+      details: "Scored 95% in Class X Central Board Examinations, excelling in all subjects."
+    },
+    {
+      logo: "/path-to-sanskriti-logo.png",
+      alt: "Sanskriti School Logo",
+      title: "Sanskriti School, Delhi",
+      time: "2020 - 2022",
+      description: "High School Diploma",
+      details: "Achieved top grades in science and mathematics, with a 91% score in Central Board Examinations."
+    },
+    {
+      logo: "./iitd-logo.png",
+      alt: "IIT Delhi Logo",
+      title: "Indian Institute of Technology, Delhi",
+      time: "2022 - Present",
+      description: "B.Tech in Textile and Fiber Sciences",
+      details: "Specializing in carbon fibre with a minor in Management from DMS IIT Delhi."
+    }   
+  ]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const index = institutionRefs.current.indexOf(entry.target as HTMLLIElement);
+        if (entry.isIntersecting) {
+          const targetElement = entry.target as HTMLLIElement;
+          targetElement.style.zIndex = `${index + 1}`;
+          targetElement.style.opacity = '1';
+        } else {
+          const targetElement = entry.target as HTMLLIElement;
+          targetElement.style.opacity = '0';
+        }
+      });
+    }, { threshold: 0.5 });
+
+    institutionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [cards]);
+
   return (
-    <div className="py-0 px-4 bg-bg text-fun-gray">
-      <div className="relative max-w-5xl mx-auto">
-        {/* Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-fun-gray"></div>
-
-        {/* Timeline Items */}
-        <div className="space-y-12">
-          {/* First Institution */}
-          <div className="flex items-center w-full">
-            <div className="w-1/2 pr-8 text-right">
-              <h3 className="text-2xl font-semibold text-fun-pink">Indian Institute of Technology, Delhi</h3>
-              <time className="block text-sm text-fun-gray-light">2022 - Present</time>
-              <p className="text-fun-gray">B.Tech in Textile and Fiber Sceinces</p>
-              <p className="text-fun-gray">
-                Pursuing a Bachelor of Technology degree in Textile and Fiber Sceinces, specializing in carbon fibre with a minor in Management from DMS IIT Delhi.
-              </p>
-            </div>
-            <div className="relative w-16 h-16 flex items-center justify-center">
-              <div className="absolute w-10 h-10 bg-fun-pink rounded-full z-10"></div>
-            </div>
-            <div className="w-1/2 pl-8"></div>
-          </div>
-
-          {/* Second Institution */}
-          <div className="flex items-center w-full">
-            <div className="w-1/2 pr-8"></div>
-            <div className="relative w-16 h-16 flex items-center justify-center">
-              <div className="absolute w-10 h-10 bg-fun-pink rounded-full z-10"></div>
-            </div>
-            <div className="w-1/2 pl-8 text-left">
-              <h3 className="text-2xl font-semibold text-fun-pink">Sanskriti School, Delhi</h3>
-              <time className="block text-sm text-fun-gray-light">2020 - 2022</time>
-              <p className="text-fun-gray">High School Diploma</p>
-              <p className="text-fun-gray">
-                Completed high school with a focus on science and mathematics, achieving top grades and developing a strong foundation in technical subjects with 91% score in Central Board Examinations.
-              </p>
-            </div>
-          </div>
-
-          {/* Third Institution */}
-          <div className="flex items-center w-full">
-            <div className="w-1/2 pr-8 text-right">
-              <h3 className="text-2xl font-semibold text-fun-pink">Sanskriti School, Delhi</h3>
-              <time className="block text-sm text-fun-gray-light">2008-2020</time>
-              <p className="text-fun-gray">2+10 Schooling</p>
-              <p className="text-fun-gray">
-                Attended school and passsed with top grades in all subjects (except English 😜), scored 95% in Class X Central Board Examinations.
-              </p>
-            </div>
-            <div className="relative w-16 h-16 flex items-center justify-center">
-              <div className="absolute w-10 h-10 bg-fun-pink rounded-full z-10"></div>
-            </div>
-            <div className="w-1/2 pl-8"></div>
-          </div>
-
-        </div>
+    <div className="py-12 px-4 bg-bg text-fun-gray">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Title for Institutions */}
+        <SectionTitle title="Education" />
+        
+        <ul id="cards" className="stack-cards">
+          {cards.map((card, index) => (
+            <li
+              key={index}
+              ref={(el) => (institutionRefs.current[index] = el)}
+              className="stack-cards__item card"
+            >
+              <div className="card__content">
+                <img src={card.logo} alt={card.alt} className="w-16 h-16 mb-4 rounded-full object-cover shadow-lg" />
+                <h3 className="text-xl font-bold text-fun-pink mb-2">{card.title}</h3>
+                <time className="block text-sm text-fun-gray-light mb-2">{card.time}</time>
+                <p className="text-base text-fun-gray mb-2">{card.description}</p>
+                <p className="text-sm text-fun-gray-light">{card.details}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
+      <style jsx>{`
+        #cards {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+
+        .stack-cards__item {
+          position: sticky;
+          top: 100px; /* Higher top value for smoother stacking */
+          margin-bottom: 20px;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.5s ease, z-index 0.5s ease;
+        }
+
+        .card__content {
+          background-color: #ffffff;
+          padding: 24px;
+          border-radius: 12px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        .card__content:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+          transition: transform 0.3s ease;
+        }
+
+        .card__content:hover img {
+          transform: scale(1.1);
+        }
+
+        h3 {
+          color: #ff4b5c;
+        }
+
+        time {
+          color: #6b7280;
+        }
+
+        p {
+          color: #374151;
+        }
+      `}</style>
     </div>
   );
 }

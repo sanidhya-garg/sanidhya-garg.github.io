@@ -4,6 +4,7 @@ import Page from "components/utility/Page";
 import React from "react";
 import Institutions from "@/components/education/Institutions";
 import Clubs from "@/components/education/Clubs";
+import Publication from "@/components/education/Publication";
 
 function projects() {
   return (
@@ -13,6 +14,7 @@ function projects() {
     >
       <Heading />
       <Institutions />
+      <Publication />
       <Clubs />
       <More />
     </Page>

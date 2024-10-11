@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { getCalApi } from "@calcom/embed-react";
 
 function Hero() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        styles: { branding: { brandColor: "#00c7ff" } },
+        hideEventTypeDetails: false,
+        layout: "month_view"
+      });
+    })();
+  }, []);
+
   return (
     <>
       <div
@@ -9,9 +21,10 @@ function Hero() {
         style={{ maxWidth: "1200px" }}
       >
         <p className="text-xl mb-5">Hey, I'm Sanidhya.</p>
-        <h1 className="heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-5xl md:text-6xl lg:text-7xl tracking-tighter mb-10 font-bold heroShinyBg">
+        <h1 className="heroTitle inline-block max-w-2xl lg:max-w-4xl w-auto relative text-5xl md:text-6xl lg:text-7xl tracking-tighter mb-10 font-bold heroShinyBg">
           I enjoy <span className="heroShiny1 text-fun-pink">building</span> and{" "}
           <span className="heroShiny2 text-fun-pink">creating</span> for fun.
+          {/* All your images */}
           <img
             className="sqD squiggle-hero-html w-16 top-[-90px] right-[5%] sm:top-[-90px] sm:right-[170px]"
             style={{ animationDelay: "0.1s" }}
@@ -57,18 +70,33 @@ function Hero() {
             src="/static/doodles/hero/code.svg"
           />
         </h1>
-        <ScrollLink
-          activeClass="active"
-          to="learnmore"
-          spy={true}
-          offset={-30}
-          smooth={true}
-          duration={500}
-        >
-          <div className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors">
-            Tell me more
-          </div>
-        </ScrollLink>
+
+        {/* Buttons section */}
+        <div className="flex space-x-4">
+          {/* Tell me more button */}
+          <ScrollLink
+            activeClass="active"
+            to="learnmore"
+            spy={true}
+            offset={-30}
+            smooth={true}
+            duration={500}
+          >
+            <div className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors">
+              Tell me more
+            </div>
+          </ScrollLink>
+
+          {/* Get in touch button */}
+          <button
+            data-cal-namespace="15min"
+            data-cal-link="sanidhya-garg/15min"
+            data-cal-config='{"layout":"month_view"}'
+            className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors"
+          >
+            Get in Touch
+          </button>
+        </div>
       </div>
     </>
   );

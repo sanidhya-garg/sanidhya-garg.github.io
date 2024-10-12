@@ -5,7 +5,7 @@ function Institutions() {
   const institutionRefs = useRef<(HTMLLIElement | null)[]>([]);
   const [cards] = useState([
     {
-      logo: "/path-to-sanskriti-logo.png",
+      logo: "https://1.bp.blogspot.com/-btPs3e1FL8g/Ux7goNTf91I/AAAAAAAABF4/Fb54W07O4oI/s1600/Sanskriti+School+Chanakyapuri+Delhi.PNG",
       alt: "Sanskriti School Logo",
       title: "Sanskriti School, Delhi",
       time: "2008 - 2020",
@@ -13,7 +13,7 @@ function Institutions() {
       details: "Scored 95% in Class X Central Board Examinations, excelling in all subjects."
     },
     {
-      logo: "/path-to-sanskriti-logo.png",
+      logo: "https://1.bp.blogspot.com/-btPs3e1FL8g/Ux7goNTf91I/AAAAAAAABF4/Fb54W07O4oI/s1600/Sanskriti+School+Chanakyapuri+Delhi.PNG",
       alt: "Sanskriti School Logo",
       title: "Sanskriti School, Delhi",
       time: "2020 - 2022",
@@ -21,7 +21,7 @@ function Institutions() {
       details: "Achieved top grades in science and mathematics, with a 91% score in Central Board Examinations."
     },
     {
-      logo: "./iitd-logo.png",
+      logo: "https://logowik.com/content/uploads/images/iit-delhi-indian-institute-of-technology-delhi5001.jpg",
       alt: "IIT Delhi Logo",
       title: "Indian Institute of Technology, Delhi",
       time: "2022 - Present",

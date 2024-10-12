@@ -27,21 +27,17 @@ export const routes: Route[] = [
     title: "Home",
     path: "/",
   },
-  // {
-  //   title: "Blog",
-  //   path: "/blog",
-  // },
-  {
-    title: "Projects",
-    path: "/projects",
-  },
-  {
-    title: "Designs",
-    path: "/designs",
-  },
   {
     title: "Education",
     path: "/education",
+  },
+  {
+    title: "Blog",
+    path: "https://iamsanidhyagarg.substack.com/",
+  },
+  {
+    title: "Projects",
+    path: "/projects",
   },
 ];
 
@@ -57,13 +53,8 @@ export const footer: Footer = {
           leavesWebsite: false,
         },
         {
-          name: "Designs",
-          link: "/Education",
-          leavesWebsite: false,
-        },
-        {
-          name: "Blog",
-          link: "/blog",
+          name: "Education",
+          link: "/education",
           leavesWebsite: false,
         },
         {
@@ -72,8 +63,8 @@ export const footer: Footer = {
           leavesWebsite: false,
         },
         {
-          name: "Designs",
-          link: "/designs",
+          name: "Blog",
+          link: "https://iamsanidhyagarg.substack.com/",
           leavesWebsite: false,
         },
       ],
@@ -83,31 +74,19 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/braydentw",
+          link: "https://github.com/sanidhya-garg",
           icon: "/static/icons/github-f.svg",
           leavesWebsite: true,
         },
         {
           name: "LinkedIn",
-          link: "https://www.linkedin.com/in/braydentw/",
+          link: "https://www.linkedin.com/in/sanidhya-garg-iitd/",
           icon: "/static/icons/linkedin-f.svg",
           leavesWebsite: true,
         },
         {
-          name: "Dribbble",
-          link: "https://dribbble.com/braydentw",
-          icon: "/static/icons/dribbble-f.svg",
-          leavesWebsite: true,
-        },
-        {
-          name: "IndieHackers",
-          link: "https://indiehackers.com/braydentw",
-          icon: "/static/icons/indiehackers-f.svg",
-          leavesWebsite: true,
-        },
-        {
           name: "Email",
-          link: "mailto:contact@braydentw.io",
+          link: "mailto:gsanidhya4@gmail.com",
           icon: "/static/icons/mail-f.svg",
           leavesWebsite: true,
         },
@@ -115,8 +94,8 @@ export const footer: Footer = {
     },
   ],
   support: {
-    buymeacoffee: "braydenw",
-    paypal: "braydentw",
+    buymeacoffee: "sanidhya",
+    paypal: "sanidhya",
     message: "I appreciate your support very much! 💙",
   },
 };

@@ -72,31 +72,31 @@ function Hero() {
         </h1>
 
         {/* Buttons section */}
-        <div className="flex space-x-4">
-          {/* Tell me more button */}
-          <ScrollLink
-            activeClass="active"
-            to="learnmore"
-            spy={true}
-            offset={-30}
-            smooth={true}
-            duration={500}
-          >
-            <div className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors">
-              Tell me more
-            </div>
-          </ScrollLink>
+        <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+  {/* Tell me more button */}
+  <ScrollLink
+    activeClass="active"
+    to="learnmore"
+    spy={true}
+    offset={-30}
+    smooth={true}
+    duration={500}
+  >
+    <div className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors">
+      Tell me more
+    </div>
+  </ScrollLink>
 
-          {/* Get in touch button */}
-          <button
-            data-cal-namespace="15min"
-            data-cal-link="sanidhya-garg/15min"
-            data-cal-config='{"layout":"month_view"}'
-            className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors"
-          >
-            Get in Touch
-          </button>
-        </div>
+  {/* Get in touch button */}
+  <button
+    data-cal-namespace="15min"
+    data-cal-link="sanidhya-garg/15min"
+    data-cal-config='{"layout":"month_view"}'
+    className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors"
+  >
+    Get in Touch
+  </button>
+</div>
       </div>
     </>
   );

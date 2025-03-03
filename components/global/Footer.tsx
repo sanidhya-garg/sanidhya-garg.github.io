@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { footer } from "@/data/global";
 import Image from "next/image";
+import SubstackWidget from './substackwidget';
 
 function Footer() {
   return (
@@ -41,18 +42,22 @@ function Footer() {
           );
         })}
         
-        {/* Subscribe Iframe on the right side */}
+        {/* Subscribe Widget on the right side */}
         <div className="col-span-1 flex justify-end sm:justify-center">
-  <iframe
-    src="https://iamsanidhyagarg.substack.com/embed"
-    className="w-full sm:w-[480px] h-[240px] sm:h-[320px]" // Responsive width and height
-    style={{ border: "none", background: "transparent" }}
-    frameBorder="0"
-    scrolling="no"
-    title="Substack Subscription"
-  ></iframe>
-</div>
-
+          <SubstackWidget
+            substackUrl="iamsanidhyagarg.substack.com"
+            placeholder="email@example.com"
+            buttonText="Subscribe"
+            theme="custom"
+            colors={{
+              primary: "#FFFFFF",
+              input: "#000000",
+              email: "#FFFFFF",
+              text: "#000000",
+            }}
+            headerText="Subscribe to my Blog" // Optional, can be omitted for default text
+          />
+        </div>
       </div>
     </footer>
   );

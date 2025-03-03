@@ -31,7 +31,6 @@ export default function Home() {
         </div>
         <Institutions />
         <Projects />
-        <Skills />
         <Linkedin />
         
         {/* <Posts allPosts={allPosts} /> */}

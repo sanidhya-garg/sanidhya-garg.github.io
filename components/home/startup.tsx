@@ -94,7 +94,7 @@ const startupData = [
     title: "Unipace",
     description: "Placement Marketplace for Government Engineering and Polytechnique Colleges - pilot with 40 colleges across Bihar",
     year: "2022-2024",
-    role: "Co-founder & CTO",
+    role: "Co-founder & CEO",
     link: "https://unipace.in/"
   },
   {

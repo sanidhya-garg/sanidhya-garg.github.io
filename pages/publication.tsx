@@ -6,17 +6,18 @@ import Institutions from "@/components/education/Institutions";
 import Clubs from "@/components/education/Clubs";
 import Publication from "@/components/education/Publication";
 import Venture from "@/components/publication/Ventureverse"
-import Ventures from "@/components/publication/VV2"
+import Knowledgebase from "@/components/publication/Knowledgbase"
+
 
 function projects() {
   return (
     <Page
-      currentPage="Publications"
-      meta={{ title: "Publications", desc: "Hi" }}
+      currentPage="Resources"
+      meta={{ title: "Resources", desc: "Hi" }}
     >
       <Heading />
+      <Knowledgebase />
       <Venture />
-      <Ventures />
     </Page>
   );
 }

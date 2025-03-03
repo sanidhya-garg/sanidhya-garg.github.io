@@ -21,7 +21,7 @@ function Heading({ tag }: HeadingProps) {
         </>
       ) : (
         <h1 className="text-4xl sm:text-6xl inline-block w-auto mx-auto mb-8 relative">
-          Publications
+          Startup Resources
           <img
             className="sqD w-10 -top-8 -right-8 absolute"
             src="/static/doodles/hero/code.svg"
@@ -30,7 +30,7 @@ function Heading({ tag }: HeadingProps) {
       )}
       {!tag && (
         <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
-          I've crafted comprehensive manuals and documents for entrepreneurial courses. Here are some of my favorite projects over the course of my journey
+          I’ve built a Knowledge Base, Mentoring Platform, and Startup Manual on Design Thining for startup founders. Check them out here.
         </p>
       )}
     </div>

@@ -9,6 +9,8 @@ import Podcasts from "@/components/home/Podcast";
 import Linkedin from "@/components/home/Linkedin";
 import Institutions from "@/components/education/Institutions";
 import Publication from "@/components/education/Publication";
+import Banner from "@/components/home/publicationbanner";
+import Startup from "@/components/home/startup"
 // import { allPosts } from "contentlayer/generated";
 // import { GetStaticProps } from "next";
 
@@ -30,7 +32,9 @@ export default function Home() {
           <Experiences />
         </div>
         <Institutions />
+        <Startup />
         <Projects />
+        <Banner />
         <Linkedin />
         
         {/* <Posts allPosts={allPosts} /> */}

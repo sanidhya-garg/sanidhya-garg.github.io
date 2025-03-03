@@ -27,17 +27,22 @@ export const routes: Route[] = [
     title: "Home",
     path: "/",
   },
+  // {
+  //   title: "Education",
+  //   path: "/education",
+  // },
+  
   {
-    title: "Education",
-    path: "/education",
-  },
-  {
-    title: "Blog",
-    path: "https://iamsanidhyagarg.substack.com/",
+    title: "Resources",
+    path: "/publication",
   },
   {
     title: "Projects",
     path: "/projects",
+  },
+  {
+    title: "Blog",
+    path: "https://iamsanidhyagarg.substack.com/",
   },
 ];
 

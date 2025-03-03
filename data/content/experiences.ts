@@ -4,11 +4,11 @@ import { Experience } from "types";
 const experiences: Experience[] = [
   {
     id: 0,
-    title: "Venture Scout Intern at SwiftSeed ",
-    desc: "Recommending promising startups to venture capitalists, aiding in the identification and evaluation of high-potential investment opportunities to drive growth in the startup ecosystem.",
+    title: "Founder Office Intern at GARSI Group",
+    desc: "Secured export deals with Sri Lankan importers and built partnerships with manufacturers and freight forwarders. Conducted market analysis to identify high-value opportunities and developed tools for lead generation, gaining hands-on experience in the end-to-end export process.",
     img: "/static/experiences/ss 1.jpg",
-    link: "https://swiftseed.in/",
-    tags: ["VentureCapital", "StartupEcosystem", "Investment Opportunities"],
+    link: "https://www.garsiexports.com/",
+    tags: ["Exports", "InternationalTrade", "EXIM"],
   },
   {
     id: 1,
